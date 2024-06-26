@@ -3,3 +3,21 @@ service:
   identifier: envprinter
   orgIdentifier: default
   projectIdentifier: helmtekton
+  gitOpsEnabled: true
+  serviceDefinition:
+    spec:
+      manifests:
+        - manifest:
+            identifier: envprintertaskrun
+            type: DeploymentRepo
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: account.Github_OAuth_1698212672976
+                  gitFetchType: Branch
+                  paths:
+                    - taskruns/env-printer-taskrun.yaml
+                  branch: main
+                  repoName: tekton-tasks
+    type: Kubernetes
