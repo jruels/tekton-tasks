@@ -8,4 +8,4 @@ spec:
     - image: alpine
       script: |
         #!/bin/sh
-        echo 'Meeow!! from Tekton 😺🚀'
+        echo 'Hello from GitOps! 😺🚀'
