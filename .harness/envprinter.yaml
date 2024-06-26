@@ -1,0 +1,5 @@
+service:
+  name: envprinter
+  identifier: envprinter
+  orgIdentifier: default
+  projectIdentifier: helmtekton
