@@ -1,6 +1,8 @@
 apiVersion: tekton.dev/v1beta1
 kind: TaskRun
 metadata:
+  annotations:
+    argocd.argoproj.io/hook: Sync
   generateName: env-printer-taskrun-
 spec:
   taskRef:
