@@ -1,0 +1,11 @@
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: env-printer
+spec:
+  steps:
+    - name: print-env
+      image: ubuntu
+      script: |
+        echo "Printing environment details"
+        env
