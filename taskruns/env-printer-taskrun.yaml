@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: TaskRun
 metadata:
-  name: env-printer-taskrun
+  generateName: env-printer-taskrun-
 spec:
   taskRef:
     name: env-printer
